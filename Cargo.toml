@@ -1,0 +1,19 @@
+[package]
+name = "ansisnap"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+authors = ["JaydenCJ"]
+description = "Snapshot-test CLI and TUI output through a built-in terminal emulator — compare rendered screen grids, not raw ANSI bytes."
+license = "MIT"
+repository = "https://github.com/JaydenCJ/ansisnap"
+keywords = ["snapshot-testing", "terminal", "ansi", "tui", "cli"]
+categories = ["command-line-utilities", "development-tools::testing"]
+
+[dependencies]
+# None. The escape-sequence parser, the terminal emulator, the snapshot
+# format and the differ are all implemented on the Rust standard library.
+
+[profile.release]
+strip = true
+lto = true
